@@ -1,9 +1,11 @@
 ﻿using System;
+using CSharpBlockchain.Scripts.Core;
 
 namespace CSharpBlockchain {
     internal class Program {
         public static void Main(string[] args) {
-            Console.WriteLine("hello world");
+            var chain = BlockChain.Get();
+            Console.WriteLine("yep");
         }
     }
 }

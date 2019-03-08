@@ -44,7 +44,11 @@
   <ItemGroup>
     <Compile Include="Program.cs" />
     <Compile Include="Properties\AssemblyInfo.cs" />
-    <Compile Include="Scripts\Block\Block.cs" />
+    <Compile Include="Scripts\Blocks\Block.cs" />
+    <Compile Include="Scripts\Core\BlockChain.cs" />
+    <Compile Include="Scripts\Core\BlockPool.cs" />
+    <Compile Include="Scripts\Crypto\Hashing.cs" />
+    <Compile Include="Scripts\Tx\Transaction.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
