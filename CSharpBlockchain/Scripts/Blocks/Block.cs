@@ -33,6 +33,10 @@ namespace CSharpBlockchain.Scripts.Blocks {
             }
             return result;
         }
+
+        public void AddTx(Transaction tx) {
+            Txs.Add(tx);
+        }
         
         public void SetPrevHash(Block prevBlock) {
             PrevHash = prevBlock.CalculateHash();

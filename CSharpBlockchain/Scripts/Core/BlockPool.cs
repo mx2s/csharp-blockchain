@@ -4,7 +4,7 @@ using CSharpBlockchain.Scripts.Blocks;
 
 namespace CSharpBlockchain.Scripts.Core {
     public class BlockPool {
-        public static BlockPool Instance;
+        private static BlockPool Instance;
 
         public static BlockPool Get() => Instance ?? (Instance = new BlockPool());
 

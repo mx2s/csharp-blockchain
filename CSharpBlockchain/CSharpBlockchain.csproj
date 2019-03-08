@@ -49,6 +49,8 @@
     <Compile Include="Scripts\Core\BlockPool.cs" />
     <Compile Include="Scripts\Crypto\Hashing.cs" />
     <Compile Include="Scripts\Tx\Transaction.cs" />
+    <Compile Include="Scripts\Tx\TxPool.cs" />
+    <Compile Include="Scripts\User\UserUtil.cs" />
   </ItemGroup>
   <ItemGroup>
     <None Include="packages.config" />
