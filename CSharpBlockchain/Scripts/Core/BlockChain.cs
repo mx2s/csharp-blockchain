@@ -6,10 +6,8 @@ namespace CSharpBlockchain.Scripts.Core {
     public class BlockChain {
         private static BlockChain _instance;
 
-        private BlockPool _blockPool;
-
         public BlockChain() {
-            _blockPool = BlockPool.Get();
+            var blockPool = BlockPool.Get();
 
             var zeroBlock = new Block() {
                 Index = 0,
@@ -22,9 +20,9 @@ namespace CSharpBlockchain.Scripts.Core {
                 Amount = 10000
             });
             
-            _blockPool.SetGetBlock(zeroBlock);
+            blockPool.SetGetBlock(zeroBlock);
         }
 
-        public static BlockChain Get() => _instance ?? (_instance = new BlockChain());
+        public static BlockChain Get() => _instance ?? (_instance = new BlockChain());      
     }
 }

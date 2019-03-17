@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using CSharpBlockchain.Scripts.Blocks;
@@ -16,8 +17,15 @@ namespace CSharpBlockchain.Scripts.Core {
 
         public void AddBlock(Block block) {
             var lastIndex = Blocks.Keys.Max();
-            Blocks[lastIndex + 1] = block;
+            if (Blocks.ContainsKey(block.Index)) {
+                Console.WriteLine("Block index already exists");
+                return;
+            }
+            Blocks[block.Index] = block;
+            Console.WriteLine("added block N: " + block.Index);
         }
+
+        public Dictionary<uint, Block> GetBlocks() => Blocks;
 
         public void SetGetBlock(Block block) {
             Blocks[0] = block;

@@ -1,3 +1,4 @@
+using System;
 using System.Collections.Generic;
 using System.Linq;
 using CSharpBlockchain.Scripts.Blocks;
@@ -36,10 +37,16 @@ namespace CSharpBlockchain.Scripts.Tx {
         public void ProcessNewBlock() {
             var TxsSize = 0;
             var block = new Block();
+            block.Index = BlockPool.Get().GetBlocks().Keys.Max() + 1;
             
             while (pool.Count > 0 && TxsSize < BlockTxLimit) {
                 var next = GetNext();
                 block.AddTx(next);
+            }
+
+            if (!BlockValidator.IsValid(block)) {
+                Console.WriteLine("Block is not valid");
+                return;
             }
 
             BlockPool.Get().AddBlock(block);
