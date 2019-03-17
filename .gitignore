@@ -6,3 +6,7 @@ packages/
 CSharpBlockchain/obj/
 
 CSharpBlockchain/bin/
+
+Main/bin/
+
+Main/obj/

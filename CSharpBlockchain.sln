@@ -1,6 +1,6 @@
 ﻿
 Microsoft Visual Studio Solution File, Format Version 12.00
-Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CSharpBlockchain", "CSharpBlockchain\CSharpBlockchain.csproj", "{BBA77D67-CC93-40AA-B0DD-7BC98B6716D2}"
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "Main", "Main\Main.csproj", "{BBA77D67-CC93-40AA-B0DD-7BC98B6716D2}"
 EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
